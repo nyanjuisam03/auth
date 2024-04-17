@@ -1,30 +1,25 @@
 import React from 'react'
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
+import { useState } from 'react';
+
 
 function Auth() {
 const [email, setEmail] =useState('');
 const [password, setPassword]= useState('')
 
   return (
-    <div>
-       <h2>Simple Auth</h2>
-       <Box
-      component="form"
-      sx={{
-        '& > :not(style)': { m: 1, width: '25ch' },
-      }}
-      noValidate
-      autoComplete="off"
-    >
-      <TextField id="outlined-basic" label="Outlined" variant="outlined" />
-      <TextField
-          id="outlined-password-input"
-          label="Password"
-          type="password"
-          autoComplete="current-password"
-        />
-    </Box>
+    <div className=''>
+      <div className='flex flex-col'>
+      <h2>Simple Auth</h2>
+      <input type="email" 
+      className=' mx-4 shadow appearance-none border rounded w-80 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+      />
+      <input type="password" 
+      className=' mx-4 shadow appearance-none border rounded w-80 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'/>
+      <button>Sign In</button>
+      <span>Or use</span>
+      <button>Sign in Google</button>
+      
+      </div>
     </div>
   )
 }
